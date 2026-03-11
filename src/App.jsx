@@ -7,6 +7,7 @@ import Services from "./pages/Services"
 import CaseStudy from "./pages/CaseStudy"
 import About from "./pages/About"
 import Apply from "./pages/Apply"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/Apply" element={<Apply />} />
           </Routes>
         </div>
+        <Footer />
     </BrowserRouter>
   );
 }
