@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="mt-12 flex flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-4">
           <img src="/logo-full-white.svg" alt="seventh guru logo" className="h-10 w-auto"/>
-          <p className="text-white text-[12px] font-body font-light text-center">Copyright © 2024 Seventh Guru. All rights reserved.</p>
+          <p className="text-white text-[12px] font-body font-light text-center">Copyright © 2026 Seventh Guru. All rights reserved.</p>
         </div>
         <div className="flex flex-col items-center gap-4">
           <h3 className="text-white text-2xl font-bold tracking-tighter">Quick Links</h3>

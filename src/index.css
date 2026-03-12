@@ -26,3 +26,24 @@
   --background-color: #EFEFEF;
   --text-color: #333333;
 }
+
+.marquee {
+  width: max-content;
+  display: flex;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

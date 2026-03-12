@@ -1,15 +1,19 @@
-import TheServices from "../components/TheServices";
+import Solution2 from "../components/Solution2";
 import TheProcess from "../components/TheProcess";
 import ProTip from "../components/ProTip";
+import ServicesHeader from "../components/ServicesHeader";
 
 export default function Services() {
   return(
     <div className="flex flex-col items-center w-full gap-8">
-      <h1 className="text-4xl text-center font-bold">How we ensure <span className="text-(--primary-color)">your brand’s growth</span></h1>
-
-      <TheServices />
-      <TheProcess />
-      <ProTip />
+      
+      <ServicesHeader />
+      <Solution2 />
+      <div className="bg-(--text-color)">
+        <TheProcess />
+        <ProTip />
+      </div>
+      
     </div>
     
   );

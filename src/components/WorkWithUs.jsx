@@ -2,7 +2,7 @@ import MainBtn from "./MainBtn"
 
 export default function WorkWithUs() {
   return (
-    <div className="flex flex-col items-center px-12 py-16 gap-12">
+    <div className="flex flex-col items-center px-12 py-16 gap-12 mb-16">
       <div className="text-center text-(--text-color) flex flex-col gap-4 items-center">
         <h2 className="font-bold text-4xl leading-1.2 tracking-tighter">How to work with Us</h2>
         <p className="text-sm font-body">Working with us is easy but we need to verify as we can’t work with every brand</p>
