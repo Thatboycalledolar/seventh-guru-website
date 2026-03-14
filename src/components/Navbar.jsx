@@ -55,7 +55,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div  className={`md:hidden flex flex-col items-center gap-6 pb-10 bg-white shadow-md transition-all duration-300 overflow-hidden ${
+        <div  className={`md:hidden flex flex-col items-center gap-6 pb-12 bg-white shadow-md transition-all duration-300 overflow-hidden ${
           open ? "max-h-96 py-4" : "max-h-0"}`}>
           <Link to="/" onClick={() => setOpen(false)} className="text-[#333333] font-medium text-sm">Home</Link>
           <Link to="/Services" onClick={() => setOpen(false)} className="text-[#333333] font-medium text-sm">Services</Link>

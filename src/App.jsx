@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Services from "./pages/Services"
 import CaseStudy from "./pages/CaseStudy"
+import CaseStudies from "./pages/CaseStudies"
 import About from "./pages/About"
 import Apply from "./pages/Apply"
 import Footer from "./components/Footer"
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Services" element={<Services />} />
             <Route path="/CaseStudy" element={<CaseStudy />} />
+            <Route path="/CaseStudies/:slug" element={<CaseStudies />} />
             <Route path="/About" element={<About />} />
             <Route path="/Apply" element={<Apply />} />
           </Routes>

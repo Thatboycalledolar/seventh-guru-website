@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react"
 export default function Solution() {
   return(
     <div className="w-full flex flex-col items-center py-16 gap-8">
-      <div className="bg-(--text-color) w-full px-8 py-4">
-        <h2 className="text-left text-md font-normal leading-1.2 tracking-tighter text-white">We have a Structured Approach to ensure your brand’s Sustainable Growth.</h2>
+      <div className="bg-(--text-color) w-full px-8 py-8">
+        <h2 className="text-left text-3xl font-normal leading-1.2 tracking-tighter text-white">We have a Structured Approach to ensure your brand’s Sustainable Growth.</h2>
       </div>
       
       <div className="flex flex-col items-start px-8 py-8 gap-12">

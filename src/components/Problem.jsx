@@ -4,8 +4,8 @@ export default function Problem() {
   return(
     <div className="w-full flex flex-col items-center gap-8 mb-4 px-8">
         <div className=" py-16 gap-8 flex flex-col items-center"> 
-          <h3 className="text-3xl text-center font-bold text-(--text-color) leading-1.2 tracking-tighter"><span className="text-(--primary-color)">Anticipated Growth Without Structure</span> Creates Friction and unalignment.</h3>
-          <p className="text-center text-(--text-color) font-body text-sm font-normal">As companies start to scale, brand clarity may weaken. Messaging becomes inconsistent, What worked at the early stage may begin to break under growth pressure.</p>
+          <h3 className="text-4xl text-center font-bold text-(--text-color) leading-1.2 tracking-tighter"><span className="text-(--primary-color)">Anticipated Growth Without Structure</span> Creates Friction and unalignment.</h3>
+          <p className="text-center text-(--text-color) font-body text-sm font-normal px-8">As companies start to scale, brand clarity may weaken. Messaging becomes inconsistent, What worked at the early stage may begin to break under growth pressure.</p>
         </div>
 
       <div className="flex flex-col items-center gap-6">

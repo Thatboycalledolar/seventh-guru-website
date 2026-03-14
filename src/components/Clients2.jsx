@@ -20,7 +20,7 @@ export default function Clients2() {
         <p className="text-sm font-body text-center">We are trusted by clients all around the globe</p>
       </div>
 
-        <div className="py-10 overflow-hidden overflow-x-hidden w-full max-w-[650px] px-16">
+        <div className="py-10 overflow-hidden overflow-x-hidden w-full max-w-162.5 md:max-w-300 md:px-48 px-16">
           <div className="relative overflow-hidden ">
 
           {/* gradient fades */}
