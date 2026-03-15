@@ -13,13 +13,17 @@ export default function CaseStudies() {
     <div className="flex flex-col w-full max-w-6xl text-(--text-color) p-8">
       
       {/* Title */}
-      <div className="mb-6">
-        <h1 className="text-4xl font-bold mb-2">
+      <div className="mb-6 flex items-center gap-6">
+        <img src={caseStudy.coverImg} alt={caseStudy.title} className="h-auto w-32 rounded-lg mb-6" />
+        <div>
+          <h1 className="text-4xl font-bold mb-2">
         {caseStudy.title}
         </h1>
         <p className="text-(--text-color) font-normal text-sm mb-12 bg-(--background-color) p-2 px-4 rounded inline-block">
           {caseStudy.category}
         </p>
+        </div>
+        
       </div>
       
 
