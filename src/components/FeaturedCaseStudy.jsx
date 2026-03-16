@@ -45,7 +45,7 @@ export default function FeatureCaseStudy() {
             </div>
           </div>
         </div>     
-        <MainBtn text="View more case studies" link="/CaseStudies" />
+        <MainBtn text="View more case studies" link="/CaseStudy" />
       </div>
       </div>
       

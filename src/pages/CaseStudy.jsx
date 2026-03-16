@@ -5,7 +5,7 @@ import FeaturedCaseHeader from "../components/FeaturedCaseHeader.jsx";
 export default function CaseStudy() {
   return(
      <div className="flex flex-col gap-16 w-full max-w-6xl mx-auto px-8 mb-12">
-        <FeaturedCaseHeader text="Some of ourCase Studies" />
+        <FeaturedCaseHeader text="Some of our Case Studies" />
 
       <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-16 w-full max-w-6xl mx-auto">
          {caseStudies.map((study) => (
