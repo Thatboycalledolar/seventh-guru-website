@@ -2,13 +2,13 @@ import ProcessCard from "./ProcessCard";
 
 export default function TheProcess() {
   return(
-    <div className="flex flex-col items-center py-8 gap-12">
-      <div className="flex flex-col items-start px-8 text-start text-white">
-        <h2 className="text-4xl font-bold mb-2 tracking-tighter">The Process</h2>
-        <p className="text-sm font-body opacity-60 ">Systems build brands, we also have structured processes we follow to create the magic your brand needs</p>
+    <div className="flex flex-col items-center py-8  gap-12 max-w-300">
+      <div className="flex flex-col items-start px-8 text-start bg-white/20 p-8 rounded-md text-white max-w-300 w-full">
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tighter">The Process</h2>
+        <p className="text-sm md:text-lg font-body opacity-60 ">Systems build brands, we also have structured processes we follow to create the magic your brand needs</p>
       </div>
 
-      <div className="flex flex-col bg-(--text-color) w-full py-6 px-4 gap-8">
+      <div className="flex flex-col w-full py-6 gap-8">
         <ProcessCard title="Onboarding" description="Taking the bold step to do what would bring the best out of your brand needs accolades of its own, we take time and honor welcoming you on board." Index="01." />
 
         <ProcessCard title="Discovery Call" description="After all the welcoming, we get on a call to understand the pain-points of your brand, your core values so we can create systems custom made for just your brand." Index="02." />
