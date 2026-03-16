@@ -1,4 +1,7 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
@@ -7,6 +10,10 @@ export default function Form() {
   const [step, setStep] = useState(1);
 
   const [error, setError] =useState("");
+
+  const formRef = useRef();
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -62,8 +69,23 @@ export default function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
-    alert("Application submitted!");
+    
+    emailjs
+    .sendForm(
+      "service_mavzenl",
+      "template_vjj7yhq",
+      formRef.current,
+      "vSIVmJ3pvFzduW6Zp"
+    )
+    .then(
+      () => {
+        navigate("/Application-recieved")
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Something went wrong, please try again later.");
+      }
+    )
   }
 
   return (
@@ -88,7 +110,17 @@ export default function Form() {
         <p className="bg-red-500 py-2 px-4 rounded-md inline-flex text-white text-sm mb-6">{error}</p>
       )}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6">
+
+        {/* Hidden inputs for form data */}
+        <input type="hidden" name="name" value={formData.name} />
+        <input type="hidden" name="email" value={formData.email} />
+        <input type="hidden" name="company" value={formData.company} />
+        <input type="hidden" name="website" value={formData.website} />
+        <input type="hidden" name="service" value={formData.service} />
+        <input type="hidden" name="budget" value={formData.budget} />
+        <input type="hidden" name="timeline" value={formData.timeline} />
+        <input type="hidden" name="message" value={formData.message} />
 
         {/* STEP 1 */}
         {step === 1 && (
@@ -115,7 +147,7 @@ export default function Form() {
 
             {/* email div */}
             <div className="flex flex-col gap-4 w-full mb-6">
-              <p>Name <span className="text-red-500">*</span></p>
+              <p>Email <span className="text-red-500">*</span></p>
               <input
               type="email"
               name="email"
@@ -213,7 +245,7 @@ export default function Form() {
               Choose a Service
             </h1>
 
-             <div className="grid grid-cols-2 gap-4 mb-8">
+             <div className="flex flex-col gap-4 mb-8">
               {[
                 {
                   title:"Brand Identity",
@@ -281,45 +313,28 @@ export default function Form() {
         {step === 4 && (
           <>
 
-          {/* step 3 header */}
+          {/* step 4 header */}
             <h1 className="text-3xl font-bold text-left mb-4 text-(--text-color)">
               What's this service worth to you
             </h1>
 
-             <div className="grid grid-cols-2 gap-4 mb-8">
+             <div className="flex flex-col gap-4 mb-8">
               {[
-                {
-                  title:"Brand Identity",
-                  img:"/icons/brand-identity.svg"
-                },
-                {
-                  title:"Website Design",
-                  img:"/icons/website.svg"
-                },
-                {
-                  title:"Brand Identity + Website Design",
-                  img:"/icons/duo.svg"
-                },
-                {
-                  title:"Retainer Partnership",
-                  img:"/icons/retainer.svg"
-                }
-
-              ].map((service) => (
+                "$500 - $1,000",
+                "$1,000 - $3,000",
+                "$3,000 - $7,000",
+                "$8,000+",
+              ].map((budget) => (
 
                 <button
-                  key={service}
+                  key={budget}
                   type="button"
                   onClick={() => {
-                    setFormData({...formData, service: service.title})
+                    setFormData({...formData, budget})
                   }}
-                  className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.service === service.title ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
+                  className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.budget === budget ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
                 >
-                  <div className="flex flex-col gap-4 p-4 group">
-                    <img src={service.img} alt="" className="w-12 h-auto bg-(--primary-color) p-2 rounded-sm"/>
-                    <p className="text-lg font-bold">{service.title}</p>
-                  </div>
-                  
+                 <p className="text-lg font-bold">{budget}</p>
                 </button>
               ))}
              </div>
@@ -353,44 +368,28 @@ export default function Form() {
         {step === 5 && (
           <>
 
-          {/* step 3 header */}
+          {/* step 5 header */}
             <h1 className="text-3xl font-bold text-left mb-4 text-(--text-color)">
-              Choose a Service
+              What's your preffered delivery duration
             </h1>
 
-             <div className="grid grid-cols-2 gap-4 mb-8">
+             <div className="flex flex-col gap-4 mb-8">
               {[
-                {
-                  title:"Brand Identity",
-                  img:"/icons/brand-identity.svg"
-                },
-                {
-                  title:"Website Design",
-                  img:"/icons/website.svg"
-                },
-                {
-                  title:"Brand Identity + Website Design",
-                  img:"/icons/duo.svg"
-                },
-                {
-                  title:"Retainer Partnership",
-                  img:"/icons/retainer.svg"
-                }
-
-              ].map((service) => (
+                "Less than 2 Weeks",
+                "1 Month",
+                "1 - 3 Months",
+                "3+ Months",
+              ].map((timeline) => (
 
                 <button
-                  key={service}
+                  key={timeline}
                   type="button"
                   onClick={() => {
-                    setFormData({...formData, service: service.title})
+                    setFormData({...formData, timeline})
                   }}
-                  className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.service === service.title ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
+                  className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.timeline === timeline ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
                 >
-                  <div className="flex flex-col gap-4 p-4 group">
-                    <img src={service.img} alt="" className="w-12 h-auto bg-(--primary-color) p-2 rounded-sm"/>
-                    <p className="text-lg font-bold">{service.title}</p>
-                  </div>
+                    <p className="text-lg font-bold">{timeline}</p>
                   
                 </button>
               ))}
@@ -427,22 +426,23 @@ export default function Form() {
               placeholder="Tell us about your project"
               value={formData.message}
               onChange={handleChange}
-              rows="5"
-              className="border p-4 rounded-md"
+              rows="8"
+              className="bg-(--background-color) p-4 rounded-md"
             />
 
             <div className="flex gap-4">
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md"
+                className="border py-3 px-6 rounded-md flex gap-2"
               >
+                <ArrowLeft width={18} />
                 Back
               </button>
 
               <button
                 type="submit"
-                className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-md"
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md"
               >
                 Submit Application
               </button>

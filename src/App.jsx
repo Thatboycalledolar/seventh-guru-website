@@ -9,6 +9,7 @@ import CaseStudies from "./pages/CaseStudies"
 import About from "./pages/About"
 import Apply from "./pages/Apply"
 import Footer from "./components/Footer"
+import ApplicationRecieved from "./pages/ApplicationRecieved"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/CaseStudies/:slug" element={<CaseStudies />} />
             <Route path="/About" element={<About />} />
             <Route path="/Apply" element={<Apply />} />
+            <Route path="/Application-recieved" element={<ApplicationRecieved />} />
           </Routes>
         </div>
         <Footer />
