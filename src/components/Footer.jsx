@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 export default function Footer() {
   return(
     <div className="bg-(--primary-color) flex flex-col items-center gap-4 py-8 px-8 w-full">
-      <div className="bg-white/20 py-14 px-6 flex flex-col items-center rounded-lg gap-8 w-full">
+      <div className="bg-white/20 py-14 px-6 flex flex-col items-center rounded-lg gap-8 w-full max-w-300">
         <div className="text-white text-center gap-2 flex flex-col items-center">
           <h3 className="text-3xl font-bold leading-1.2 tracking-tighter">The Growth you envision for your brand needs structure</h3>
           <p className="text-sm font-body">Work with us, fill up our short application and get on that call today</p>
