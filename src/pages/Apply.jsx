@@ -1,4 +1,5 @@
 import Form from "../components/form";
+import Contact from "../components/Contact";
 
 export default function Apply() {
   return(
@@ -9,6 +10,7 @@ export default function Apply() {
       </div>
       
       <Form />
+      <Contact />
     </div>
   );
 }

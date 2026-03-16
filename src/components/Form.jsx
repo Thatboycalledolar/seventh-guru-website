@@ -69,7 +69,7 @@ export default function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
+
     emailjs
     .sendForm(
       "service_mavzenl",
@@ -89,7 +89,7 @@ export default function Form() {
   }
 
   return (
-    <div className="max-w-5xl w-full mx-auto px-6 py-12">
+    <div className="max-w-5xl w-full mx-auto px-6 py-12 mb-24">
 
       {/* Progress indicator */}
       <div className="flex justify-between mb-10 text-sm">
@@ -164,7 +164,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-(--primary-color) text-white py-3 px-6 flex gap-2 rounded-md"
+                className="bg-(--primary-color) text-white py-3 px-6 flex gap-2 rounded-md cursor-pointer"
               >
                 Next
                 <ArrowRight width={18} />
@@ -214,7 +214,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md flex gap-2"
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 <ArrowLeft width={18} />
                 Back
@@ -224,7 +224,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-(--primary-color) text-white py-3 px-6  flex gap-2 rounded-md"
+                className="bg-(--primary-color) text-white py-3 px-6  flex gap-2 rounded-md cursor-pointer"
               >
                 Next
                 <ArrowRight width={18} />
@@ -274,8 +274,8 @@ export default function Form() {
                   }}
                   className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.service === service.title ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
                 >
-                  <div className="flex flex-col gap-4 p-4 group">
-                    <img src={service.img} alt="" className="w-12 h-auto bg-(--primary-color) p-2 rounded-sm"/>
+                  <div className="flex items-center gap-4 p-2 group">
+                    <img src={service.img} alt="" className="w-10 h-auto bg-(--primary-color) p-1 rounded-sm"/>
                     <p className="text-lg font-bold">{service.title}</p>
                   </div>
                   
@@ -288,7 +288,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md flex gap-2"
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 <ArrowLeft width={18} />
                 Back
@@ -297,7 +297,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2"
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 Next
                 <ArrowRight width={18} />
@@ -344,7 +344,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md flex gap-2"
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 <ArrowLeft width={18} />
                 Back
@@ -353,7 +353,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2"
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 Next
                 <ArrowRight width={18} />
@@ -400,7 +400,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md flex gap-2"
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 <ArrowLeft width={18} />
                 Back
@@ -409,7 +409,7 @@ export default function Form() {
               <button
                 type="button"
                 onClick={nextStep}
-                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2"
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 Next
                 <ArrowRight width={18} />
@@ -421,20 +421,28 @@ export default function Form() {
         {/* STEP 6 */}
         {step === 6 && (
           <>
+
+          <h1 className="text-3xl font-bold text-left text-(--text-color)">
+              Walk us through your Project <span className="text-red-500">*</span>
+            </h1>
+
+
+            <div className="flex flex-col"></div>
             <textarea
               name="message"
               placeholder="Tell us about your project"
               value={formData.message}
               onChange={handleChange}
               rows="8"
-              className="bg-(--background-color) p-4 rounded-md"
+              required
+              className="bg-(--background-color) p-4 rounded-md mb-8"
             />
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-between">
               <button
                 type="button"
                 onClick={prevStep}
-                className="border py-3 px-6 rounded-md flex gap-2"
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
               >
                 <ArrowLeft width={18} />
                 Back
@@ -442,7 +450,7 @@ export default function Form() {
 
               <button
                 type="submit"
-                className="bg-(--primary-color) text-white py-3 px-6 rounded-md"
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md cursor-pointer"
               >
                 Submit Application
               </button>
