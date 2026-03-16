@@ -14,10 +14,10 @@ export default function Clients2() {
   ];
 
   return (
-    <div className=" flex flex-col justify-center items-center mb-16 w-full overflow-hidden ">
+    <div className=" flex flex-col justify-center items-center mb-16 w-full max-w-300 overflow-hidden ">
        <div className="flex flex-col items-center px-12 gap-2 mb-8 text-(--text-color)">
-        <h2 className="text-4xl font-bold text-center leading-1.2 tracking-tighter">Our Clients trust us <br />completely</h2>
-        <p className="text-sm font-body text-center">We are trusted by clients all around the globe</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-center leading-1.2 tracking-tighter">Our Clients trust us completely</h2>
+        <p className="text-sm md:text-lg font-body text-center">We are trusted by clients all around the globe</p>
       </div>
 
         <div className="py-10 overflow-hidden overflow-x-hidden w-full max-w-162.5 md:max-w-300 md:px-48 px-16">
@@ -31,7 +31,7 @@ export default function Clients2() {
 
               <div className="flex shrink-0">
                 {[...clients, ...clients].map((client, index) => (
-                <div key={index} className="relative group w-[70px] h-[50px] mr-10 md:mr-16">
+                <div key={index} className="relative group w-[70px] h-[50px] mr-10 md:mr-16 md:h-16 md:w-20">
 
                   {/* base logo */}
                   <img
