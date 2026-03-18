@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
         <Navbar />
-        <div className="pt-24 min-h-screen w-full flex flex-col justify-start items-center">
+        <div className="min-h-screen w-full flex flex-col justify-start items-center">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Services" element={<Services />} />

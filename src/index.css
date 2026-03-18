@@ -47,3 +47,22 @@
     transform: translate3d(-50%, 0, 0);
   }
 }
+
+
+.marquee2 {
+  width: max-content;
+  display: flex;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+
+@keyframes marquee2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

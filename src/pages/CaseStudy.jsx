@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { caseStudies } from "../data/CaseStudies.js";
 import FeaturedCaseHeader from "../components/FeaturedCaseHeader.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 export default function CaseStudy() {
   return(
      <div className="flex flex-col gap-16 w-full max-w-6xl mx-auto px-8 mb-12">
         <FeaturedCaseHeader text="Some of our Case Studies" />
 
-      <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-16 w-full max-w-6xl mx-auto">
+      <Reveal>
+        <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-16 w-full max-w-6xl mx-auto">
          {caseStudies.map((study) => (
         <Link key={study.slug} to={`/CaseStudies/${study.slug}`}>
 
@@ -19,17 +21,19 @@ export default function CaseStudy() {
               className="rounded-lg w-full h-60 object-cover mb-8"
             />
 
-            <h3 className="mt-4 text-xl font-bold">
+            <h3 className="mt-4 text-xl font-bold md:text-3xl md:mb-2">
               {study.title}
             </h3>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 bg-white inline-flex px-2 py-1 rounded-sm shadow-md md:text-sm">
               {study.category}
             </p>
           </div>
         </Link>
         ))}
       </div>
+      </Reveal>
+      
 
         
       </div>

@@ -1,15 +1,19 @@
-
+import Reveal from "../components/Reveal";
 
 export default function About() {
   return(
-    <div className="flex flex-col px-8">
-      <h1 className="text-4xl text-(--text-color) font-bold text-center mb-16">Let’s walk you through <br /> <span className="text-(--primary-color)">Who we are</span></h1>
-
+    <div className="flex flex-col px-8 md:px-16 pt-8 max-w-300">
+      <Reveal>
+        <h1 className="text-4xl md:text-5xl text-(--text-color) font-bold text-center mb-16">Let’s walk you through <br /> <span className="text-(--primary-color)">Who we are</span></h1>
+      </Reveal>
+      
+      
       {/* main div for the about content */}
       <div className="flex flex-col">
 
-        {/* div for each content */}
-        <div className="flex flex-col text-(--text-color) w-full mb-16">
+      <Reveal>
+         {/* div for each content */}
+        <div className="flex flex-col text-(--text-color) w-full mb-16 ">
           <div className="flex flex-col mb-4 ">
             <h2 className="text-3xl font-bold ">What Drives Us</h2>
             <p className="text-md">(Mission and Vision)</p>
@@ -23,8 +27,11 @@ export default function About() {
             </p>
           </div >
         </div>
+      </Reveal>
 
+       
 
+      <Reveal>
         <div className="flex flex-col text-(--text-color) w-full mb-16">
           <div className="flex flex-col gap-1 mb-4 ">
             <h2 className="text-3xl font-bold ">Why Strategy/Infrastructure matters</h2>
@@ -40,8 +47,10 @@ export default function About() {
             
 
         </div>
+      </Reveal>
 
 
+      <Reveal>
         <div className="flex flex-col text-(--text-color) w-full mb-16">
           <div className="flex flex-col gap-1 mb-4 ">
             <h2 className="text-3xl font-bold ">Our Core Values</h2>
@@ -55,26 +64,28 @@ export default function About() {
             </p>
           </div>
         </div>
-        
+      </Reveal>
+
       </div>
 
-     
-      <div className="flex flex-col gap-1 mb-4 bg-(--primary-color) text-white py-12 px-8 rounded-lg">
+     <Reveal>
+      <div className="flex flex-col gap-1 mb-4 bg-(--primary-color) text-white py-12 px-8 md:px-16 rounded-lg md:items-start w-full">
         <h2 className="text-4xl font-bold mb-4 text-center ">Founder's Note</h2>
-        <div className="flex flex-col font-body w-full">
-          <p className="text-md text-center mb-4">
+        <div className="flex flex-col font-body w-full ">
+          <p className="text-md text-center md:text-start mb-4">
           Seventh Guru is a brand infrastructure and design studio that helps growth-stage companies clarify their brand positioning, and scale with confidence. 
         </p>
-        <p className="text-md text-center mb-4">
+        <p className="text-md text-center md:text-start mb-4">
           We work with founders and teams that understand that design is more than just beautiful visuals, it is strategic leverage for brands when used right.
         </p>
-        <p className="text-md text-center mb-4">
+        <p className="text-md text-center md:text-start mb-4">
           Every engagement begins with clarity: who you are, what you stand for, and why you matter. 
         </p>
-
-        <p className="font-bold text-(--primary-color) bg-white py-2 px-4 rounded-md text-center">Clients do not come to us for design, They come for direction.</p>
         </div>
-      </div>    
+        <p className="font-bold text-(--primary-color) bg-white py-2 px-4 rounded-md text-center md:text-start ">Clients do not come to us for design, They come for direction.</p>
+      </div>  
+     </Reveal>
+        
     </div>
     
   );

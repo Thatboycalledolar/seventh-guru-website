@@ -8,6 +8,7 @@ import Client2 from "../components/Clients2";
 export default function Home() {
   return(
    <div className="flex flex-col items-center w-full">
+    
     <Hero />
     <Problem />
     <Solution />
