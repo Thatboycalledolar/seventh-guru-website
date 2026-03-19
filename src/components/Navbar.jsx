@@ -5,7 +5,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className={`bg-(--primary-color) fixed w-[95%] z-30 rounded-full left-1/2 -translate-x-1/2 mt-1 max-w-300 p-0.5 shadow-lg bg-linear-to-br from-(--secondary-color) via-white/40 to-(--secondary-color) ${open ? "p-0 w-full" : "p-0.5 w-[95%]"}`}>
+    <nav className={`bg-(--primary-color) fixed w-[95%] z-30 rounded-full left-1/2 -translate-x-1/2 max-w-300 shadow-lg bg-linear-to-br from-(--secondary-color) via-white/40 to-(--secondary-color) ${open ? "p-0 w-full mt-0" : "p-0.5 w-[95%] mt-1"}`}>
       <div className={`bg-(--primary-color) shadow-lg px-8 py-4 flex justify-between items-center ${open ? "rounded-none" : "rounded-full"}`}>
         
         {/* Logo */}
@@ -56,7 +56,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div  className={`md:hidden flex items-end flex-col gap-4 px-8 pt-8 pb-24 bg-(--primary-color) shadow-2xl transition-all duration-300 overflow-hidden relative ${
-          open ? "max-h-102 rounded-none" : "max-h-0 rounded-full"} `}> 
+          open ? "max-h-102 rounded-none" : "max-h-0"} `}> 
 
           <div className="flex flex-col items-end gap-4">
             <Link to="/" onClick={() => setOpen(false)} className="text-white font-bold text-lg">Home</Link>
