@@ -10,7 +10,7 @@ export default function Solution() {
       
       <div className="flex flex-col items-start py-8 md:grid grid-cols-2 gap-12">
         
-        <div className=" gap-3 flex flex-col items-start bg-amber-100 py-6 rounded-2xl border-3 border-(--text-color) px-8">
+        <div className=" gap-3 flex flex-col items-start bg-amber-100 py-6 rounded-2xl border-3 border-(--text-color) px-8 hover:-translate-y-3 hover:border-(--primary-color) cursor-pointer transition-transform 3s ease-in-out">
             <p className="text-9xl font-bold text-amber-900/60">01.</p>
             <h3 className="font-bold tracking-tighter text-3xl md:text-4xl text-(--text-color) text-left">Brand Foundation</h3>
             <p className="font-normal text-(--text-color) text-sm md:text-lg mb-4 font-body leading-tight w-full">For companies that need clarity, positioning, and credibility. We create stunning visuals that effectively depict the brand and it's core values to represent it both online and prints.</p>
@@ -24,7 +24,7 @@ export default function Solution() {
         </div>
 
 
-        <div className=" gap-3 flex flex-col items-start bg-blue-200 py-6 rounded-2xl border-3 border-(--text-color) px-8 ">
+        <div className=" gap-3 flex flex-col items-start bg-blue-200 py-6 rounded-2xl border-3 border-(--text-color) px-8 hover:-translate-y-3 hover:border-(--primary-color) cursor-pointer transition-transform 3s ease-in-out">
             <p className="text-9xl font-bold text-amber-900/60">02.</p>
             <h3 className="font-bold tracking-tighter text-3xl md:text-4xl text-left text-(--text-color)">Digital Infrastructure</h3>
             <p className="font-normal text-(--text-color) text-sm md:text-lg mb-4 font-body leading-tight w-full">Your website is your 24/7 salesman and brand representative, Creating a great user experience for your website visitors is important to retain trust and choice of your brand. </p>
@@ -38,7 +38,7 @@ export default function Solution() {
         </div>
 
 
-        <div className=" gap-3 flex flex-col items-start bg-purple-200 py-6 rounded-2xl border-3 border-(--text-color) px-8 col-span-2">
+        <div className=" gap-3 flex flex-col items-start bg-purple-200 py-6 rounded-2xl border-3 border-(--text-color) px-8 col-span-2 hover:-translate-y-3 hover:border-(--primary-color) cursor-pointer transition-transform 3s ease-in-out">
             <p className="text-9xl font-bold text-amber-900/60">03.</p>
             <h3 className="font-bold tracking-tighter text-3xl md:text-4xl text-left text-(--text-color)">Retainer Partnership</h3>
             <p className="font-normal text-(--text-color) text-sm md:text-lg mb-4 font-body leading-tight w-full ">After creating the brand infrastructure, it’s time to make use of these system to maintain the overall look and performance of your brand. We offer ongoing design leadership and execution for scaling teams..</p>
