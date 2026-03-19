@@ -2,18 +2,21 @@ import MainBtn from "./MainBtn";
 import FeaturedCaseHeader from "./FeaturedCaseHeader";
 import { caseStudies } from "../data/CaseStudies";
 import { Link } from "react-router-dom";
+import Reveal from "./Reveal";
 
 
 export default function FeatureCaseStudy() {
   return(
     <div className="flex flex-col items-center w-full max-w-300 py-16 gap-8 px-6 md:px-16">
-      <FeaturedCaseHeader text="Featured Case Study" />
+      <Reveal duration={0.5}>
+         <FeaturedCaseHeader text="Featured Case Study" />
+      </Reveal>
 
       <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-10 w-full mb-8">
                {caseStudies.map((study) => (
               <Link key={study.slug} to={`/CaseStudies/${study.slug}`}>
-
-          <div className="group relative h-80 rounded-lg overflow-hidden cursor-pointer">
+        <Reveal duration={0.5}>
+            <div className="group relative h-80 rounded-lg overflow-hidden cursor-pointer w-full">
                     {/* Background Image */}
               <img
                 src={study.coverImg}
@@ -31,19 +34,16 @@ export default function FeatureCaseStudy() {
                 transition-all duration-500 ease-in-out"
                 style={{ backgroundColor: `${study.color}99` }}
               >
-                <h3 className="text-white text-xl font-bold">
+                <h3 className="text-white text-2xl font-bold">
                   {study.title}
                 </h3>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/80 text-sm font-body">
                   {study.category}
                 </p>
               </div>
                 </div>
-                {/* hidden div for mobile
-              <div className="flex flex-col md:hidden mt-4 w-full">
-                <h3 className="text-(--text-color) text-xl font-bold">{study.title}</h3>
-                <p className="text-(--text-color) text-sm bg-(--background-color) py-2 px-4 rounded-md">{study.category}</p>
-              </div> */}
+      </Reveal>
+          
               </Link>
 
               
@@ -51,8 +51,10 @@ export default function FeatureCaseStudy() {
           
          
       </div>
-
-       <MainBtn text="View more case studies" link="/CaseStudy" />
+      <Reveal duration={0.5}>
+          <MainBtn text="View more case studies" link="/CaseStudy" />
+      </Reveal>
+       
     </div>
   )
 }
