@@ -15,14 +15,14 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="flex justify-center items-center text-white gap-6">
           <div className="hidden md:flex text-md gap-6 font-medium">
-          <Link to="/" className="hover:text-(--primary-color) hover:underline hover:underline-offset-4 ">Home</Link>
-          <Link to="/Services" className="hover:text-(--primary-color) hover:underline hover:underline-offset-4 ">Services</Link>
-          <Link to="/CaseStudy" className="hover:text-(--primary-color) hover:underline hover:underline-offset-4 ">CaseStudy</Link>
-          <Link to="/About" className="hover:text-(--primary-color) hover:underline hover:underline-offset-4">About</Link>
+          <Link to="/" className="hover:text-(--secondary-color) hover:underline hover:underline-offset-4 ">Home</Link>
+          <Link to="/Services" className="hover:text-(--secondary-color) hover:underline hover:underline-offset-4 ">Services</Link>
+          <Link to="/CaseStudy" className="hover:text-(--secondary-color) hover:underline hover:underline-offset-4 ">CaseStudy</Link>
+          <Link to="/About" className="hover:text-(--secondary-color) hover:underline hover:underline-offset-4">About</Link>
         </div>
         <div className="hidden md:flex">
           <Link to="/Apply">
-            <button className="bg-white flex items-center text-(--primary-color) text-[14px] font-semibold px-4 py-2 rounded-full gap-2 hover:bg-(--secondary-color) cursor-pointer"> Work with Us</button>
+            <button className="bg-white flex items-center text-(--primary-color) text-[14px] font-semibold px-4 py-2 rounded-full gap-2 border-2 border-(--secondary-color) hover:bg-(--secondary-color) cursor-pointer"> Work with Us</button>
           </Link>
         </div>
         </div>

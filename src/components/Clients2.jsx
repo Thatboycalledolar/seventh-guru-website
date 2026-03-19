@@ -14,10 +14,9 @@ export default function Clients2() {
   ];
 
   return (
-    <div className=" flex flex-col justify-center items-center mb-16 w-full max-w-300 overflow-hidden ">
-       <div className="flex flex-col items-center px-12 gap-2 mb-8 text-(--text-color)">
-        <h2 className="text-4xl md:text-5xl font-bold text-center leading-1.2 tracking-tighter">Our Clients trust us completely</h2>
-        <p className="text-sm md:text-lg font-body text-center">We are trusted by clients all around the globe</p>
+    <div className=" flex flex-col justify-center items-center mb-16 w-full max-w-300 overflow-hidden mt-18">
+       <div className="flex flex-col  items-center px-12 gap-2 text-(--text-color)">
+        <h2 className="text-lg md:text-2xl font-bold text-center leading-1.2 tracking-tighter">Trusted by:</h2>
       </div>
 
         <div className="py-10 overflow-hidden overflow-x-hidden w-full max-w-162.5 md:max-w-300 md:px-48 px-16">

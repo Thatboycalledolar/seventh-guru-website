@@ -23,7 +23,7 @@ export default function ImageFade() {
   }, []);
 
   return (
-      <div className="relative w-full h-100 md:h-180 max-w-300 overflow-hidden rounded-2xl mt-24">
+      <div className="relative w-full h-80 md:h-120 max-w-300 overflow-hidden shadow-2xl rounded-2xl">
       <AnimatePresence>
         <motion.img
           key={index}

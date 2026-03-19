@@ -10,11 +10,13 @@ export default function Home() {
    <div className="flex flex-col items-center w-full">
     
     <Hero />
+    <Client2 />
+    <div className="h-0.5 rounded-full max-w-150 bg-[#333333] mt-4 mb-10 w-[70%]"></div>
     <Problem />
     <Solution />
     <FeaturedCaseStudy />
     <WorkWithUs />
-    <Client2 />
+    
    </div>
     
   );
