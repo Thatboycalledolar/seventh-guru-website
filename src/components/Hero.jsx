@@ -1,10 +1,11 @@
  import MainBtn from "../components/MainBtn";
  import Reveal from "./Reveal";
  import ImageFade from "./ImageFade";
+ import Stats from "./Stats";
  
  export default function Hero() {
   return(
-    <div className=" w-full bg-linear-to-b from-(--primary-color) to-[#001E3A] flex items-start justify-center">
+    <div className=" w-full min-h-screen  bg-linear-to-b from-(--primary-color) to-[#001E3A] flex flex-col items-center justify-center">
       
       <div className="flex flex-col lg:flex-row items-start justify-start w-full pt-48 px-8 pb-24 gap-8 max-w-300">
 
@@ -23,13 +24,24 @@
             </Reveal>
           </div>
         </div>
-
-        <Reveal delay={0.8} y={70}>
+        
+        <Reveal delay={0.8} className="flex relative w-full">
           <ImageFade />
         </Reveal>
       
         
       </div>
+
+      <Reveal delay={0} className="w-full max-w-300 px-8 md:px-20">
+        <div className="flex items-center justify-between bg-white gap-4 border-3 border-(--secondary-color) rounded-2xl md:px-20 px-10 py-3 md:py-6 mb-24">
+          <Stats number="30+" title="Brands built" />
+          <div className="h-8 bg-(--text-color) rounded-full w-0.5"></div>
+          <Stats number="3" title="Countries" />
+          <div className="h-8 bg-(--text-color) rounded-full w-0.5"></div>
+          <Stats number="12+" title="Tech Experts" />
+        </div>
+        
+      </Reveal>
 
       
       

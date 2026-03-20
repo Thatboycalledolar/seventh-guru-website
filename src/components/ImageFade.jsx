@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Reveal from "./Reveal";
 
 export default function ImageFade() {
   const images = [

@@ -21,7 +21,7 @@ export default function Clients2() {
             </div>
         </Reveal>
        
-        <Reveal duration={0.7}>
+        <Reveal duration={0.7} className="w-full">
         <div className="py-10 overflow-hidden overflow-x-hidden w-full max-w-162.5 md:max-w-300 md:px-48 px-16">
           <div className="relative overflow-hidden ">
 
@@ -29,7 +29,7 @@ export default function Clients2() {
           <div className="absolute left-0 top-0 h-full w-24 bg-linear-to-r from-white to-transparent z-10"></div>
           <div className="absolute right-0 top-0 h-full w-24 bg-linear-to-l from-white to-transparent z-10"></div>
 
-          <div className="flex marquee w-max">
+          <div className="flex marquee w-full">
 
               <div className="flex shrink-0">
                 {[...clients, ...clients].map((client, index) => (

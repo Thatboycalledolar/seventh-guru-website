@@ -13,16 +13,16 @@ export default function WorkWithUs() {
       
 
       <div className="flex flex-col gap-8 items-center w-full">
-        <Reveal duration={0.7}>
+        <Reveal duration={0.7} className="w-full">
           <p className="font-body font-light bg-(--background-color) p-6 rounded-md text-sm md:text-lg w-full">Apply to work with us by filling out our Application form</p>
         </Reveal>
-        <Reveal duration={0.8}>
+        <Reveal duration={0.8} className="w-full">
           <p className="font-body font-light bg-(--background-color) p-6 rounded-md text-sm md:text-lg w-full">Get on a Discovery call</p>
         </Reveal>
-        <Reveal duration={0.9}>
+        <Reveal duration={0.9} className="w-full">
           <p className="font-body font-light bg-(--background-color) p-6 rounded-md text-sm md:text-lg w-full">We device the best strategy for your brand and execute</p>
         </Reveal>
-        <Reveal duration={1.0}>  
+        <Reveal duration={1.0} className="w-full">  
            <p className="font-body font-light bg-(--background-color) p-6 rounded-md text-sm md:text-lg w-full">Long term Partnership</p>
         </Reveal>
         </div>

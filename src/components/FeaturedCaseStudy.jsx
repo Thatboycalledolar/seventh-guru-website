@@ -8,7 +8,7 @@ import Reveal from "./Reveal";
 export default function FeatureCaseStudy() {
   return(
     <div className="flex flex-col items-center w-full max-w-300 py-16 gap-8 px-6 md:px-16">
-      <Reveal duration={0.5}>
+      <Reveal duration={0.5} className="w-full">
          <FeaturedCaseHeader text="Featured Case Study" />
       </Reveal>
 

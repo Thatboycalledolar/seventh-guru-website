@@ -45,7 +45,7 @@ export default function Solution() {
         </div>
         </Reveal>
 
-        <Reveal duration={0.5}>
+        <Reveal duration={0.5} className="col-span-2">
           <div className=" gap-3 flex flex-col items-start bg-purple-200 py-6 rounded-2xl border-3 border-(--text-color) px-8 col-span-2 hover:-translate-y-3 hover:border-(--primary-color) transition-transform 3s ease-in-out">
             <p className="text-9xl font-bold text-purple-900/60">03.</p>
             <h3 className="font-bold tracking-tighter text-3xl md:text-4xl text-left text-(--text-color)">Retainer Partnership</h3>

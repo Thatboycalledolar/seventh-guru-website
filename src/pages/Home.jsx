@@ -4,6 +4,7 @@ import Solution from "../components/Solution";
 import FeaturedCaseStudy from "../components/FeaturedCaseStudy";
 import WorkWithUs from "../components/WorkWithUs";
 import Client2 from "../components/Clients2";
+import Review from "../components/Review";
 
 export default function Home() {
   return(
@@ -15,6 +16,7 @@ export default function Home() {
     <Problem />
     <Solution />
     <FeaturedCaseStudy />
+    <Review />
     <WorkWithUs />
     
    </div>
