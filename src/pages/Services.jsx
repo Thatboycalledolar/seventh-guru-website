@@ -3,13 +3,14 @@ import TheProcess from "../components/TheProcess";
 import ProTip from "../components/ProTip";
 import ServicesHeader from "../components/ServicesHeader";
 import Reveal from "../components/Reveal";
+import ServicePageHead from "../components/ServicePageHead";
 
 export default function Services() {
   return(
-    <div className="flex flex-col items-center w-full gap-8 ">
+    <div className="flex flex-col items-center w-full gap-8">
       
-      <Reveal>
-        <ServicesHeader />
+      <Reveal className="w-full">
+        <ServicePageHead />
       </Reveal>
       <Reveal>
         <Solution2 />
