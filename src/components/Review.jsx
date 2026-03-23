@@ -39,7 +39,7 @@ export default function Review() {
        
         
         <Reveal duration={0.9}>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center justify-center gap-8">
           <button
           onClick={prevPage}
           className="cursor-pointer bg-white p-4 hover:shadow-lg hover:border-2 border-red-500 rounded-full w-full">

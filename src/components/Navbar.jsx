@@ -56,7 +56,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div  className={`md:hidden flex items-end flex-col gap-4 px-8 pt-8 pb-24 bg-(--primary-color) shadow-2xl transition-all duration-300 overflow-hidden relative ${
-          open ? "max-h-102 rounded-none" : "max-h-0"} `}> 
+          open ? "max-h-102 rounded-none " : "max-h-0"} `}> 
 
           <div className="flex flex-col items-end gap-4">
             <Link to="/" onClick={() => setOpen(false)} className="text-white font-bold text-lg">Home</Link>
