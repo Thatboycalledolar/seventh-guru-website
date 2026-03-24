@@ -66,7 +66,7 @@ export default function Navbar() {
             <Link to="/Apply" onClick={() => setOpen(false)}><button className="bg-white flex text-(--primary-color) text-lg border-2 border-(--secondary-color) items-center font-bold px-4 py-2 rounded-md gap-2 cursor-pointer"> Work with Us </button></Link>
           </div>
 
-           <h1 className="font-bold text-9xl bg-clip-text text-transparent bg-linear-to-r from-white to-(--primary-color)">menu</h1>
+           <h1 className="font-bold text-9xl bg-clip-text text-transparent bg-linear-to-r from-white to-transparent">menu</h1>
           
           
            
