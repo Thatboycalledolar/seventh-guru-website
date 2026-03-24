@@ -16,7 +16,7 @@ export default function ServiceDropDown({id, active, setActive, header,service, 
       {/* Button */}
       <button
         onClick={toggleDropdown}
-        className="hover:border-2 border-(--primary-color) px-2 w-full py-2 rounded-md flex"
+        className="hover:border-2 border-(--primary-color) px-2 w-full py-2 rounded-md flex cursor-pointer"
       >
         <span className={`transition ease-in-out 3000 ${isOpen? "rotate-90" : "rotate-0"}`}><ChevronRight width={18} color="#0059AA"/></span>{service}
       </button>

@@ -184,11 +184,13 @@ export default function Services() {
 
       </div>
       
-      <div className="bg-(--text-color) w-full flex flex-col items-center py-16">
+      <div className="bg-(--text-color) w-full flex flex-col items-center py-8">
         <div className=" max-w-300 px-4">
             <TheProcess />
-
+          <Reveal>
             <ProTip /> 
+          </Reveal>
+            
 
           
           
