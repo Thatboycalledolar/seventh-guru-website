@@ -10,16 +10,16 @@ export default function CaseStudies() {
   }
 
   return (
-    <div className="flex flex-col w-full max-w-6xl text-(--text-color) p-8">
+    <div className="flex flex-col w-full max-w-6xl text-(--text-color) p-8 mt-24">
       
       {/* Title */}
       <div className="mb-6 flex items-center gap-6">
-        <img src={caseStudy.coverImg} alt={caseStudy.title} className="h-auto w-32 rounded-lg mb-6" />
+        <img src={caseStudy.coverImg} alt={caseStudy.title} className="h-auto w-32 md:w-48 rounded-lg mb-6" />
         <div>
-          <h1 className="text-4xl font-bold mb-2">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
         {caseStudy.title}
         </h1>
-        <p className="text-(--text-color) font-normal text-sm mb-12 bg-(--background-color) p-2 px-4 rounded inline-block">
+        <p className="text-(--text-color) font-normal text-sm md:text-lg mb-12 bg-(--background-color) p-2 px-4 rounded inline-block">
           {caseStudy.category}
         </p>
         </div>
@@ -28,17 +28,17 @@ export default function CaseStudies() {
       
 
       {/* painpoint */}
-      <p className=" mb-12">
+      <p className=" mb-12 md:text-lg">
         <span className="font-bold">Pain Point:</span> {caseStudy.painPoint}
       </p>
 
       {/* risk */}
-      <p className=" mb-12">
+      <p className=" mb-12 md:text-lg">
         <span className="font-bold">Risk:</span> {caseStudy.risk}
       </p>
 
       {/* system */}
-      <p className=" mb-12">
+      <p className=" mb-12 md:text-lg">
         <span className="font-bold">System:</span> {caseStudy.system}
       </p>
 

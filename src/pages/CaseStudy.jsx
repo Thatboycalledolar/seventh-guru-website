@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
 import { caseStudies } from "../data/CaseStudies.js";
-import FeaturedCaseHeader from "../components/FeaturedCaseHeader.jsx";
+import CaseStudyPageHead from "../components/CaseStudyPageHead.jsx";
 import Reveal from "../components/Reveal.jsx";
 
 export default function CaseStudy() {
   return(
-     <div className="flex flex-col gap-16 w-full max-w-6xl mx-auto px-8 mb-12">
-        <FeaturedCaseHeader text="Some of our Case Studies" />
+     <div className="flex flex-col gap-8 w-full mb-12">
+      <CaseStudyPageHead />
 
-      <Reveal>
-        <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-16 w-full max-w-6xl mx-auto">
+      <div className="flex flex-col px-8 max-w-300 items-center w-full mx-auto">
+        
+      
+        <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-16 w-full">
          {caseStudies.map((study) => (
         <Link key={study.slug} to={`/CaseStudies/${study.slug}`}>
-
-          <div className="group cursor-pointer p-4 pb-8 bg-(--background-color) rounded-lg hover:shadow-lg transition-shadow duration-300 h-full">
+          <Reveal>
+          <div className="group cursor-pointer p-4 pb-8 bg-(--background-color) rounded-lg hover:shadow-lg transition-shadow duration-300 h-full w-full">
 
             <img
               src={study.coverImg}
@@ -29,10 +31,12 @@ export default function CaseStudy() {
               {study.category}
             </p>
           </div>
+          </Reveal>
         </Link>
         ))}
       </div>
-      </Reveal>
+      </div>
+
       
 
         
