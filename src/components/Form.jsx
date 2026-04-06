@@ -89,7 +89,7 @@ export default function Form() {
   }
 
   return (
-    <div className="w-full max-w-300 mx-auto px-6 md:px-20 py-12 mb-24">
+    <div className="w-full max-w-300 mx-auto px-8 md:px-20 py-12 mb-24">
 
       {/* Progress indicator */}
       <div className="flex justify-between mb-10 text-sm">
