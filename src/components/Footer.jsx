@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="bg-white/20 py-14 px-6 flex flex-col items-center rounded-lg gap-8 w-full max-w-300">
         <div className="text-white text-center gap-2 flex flex-col items-center">
           <h3 className="text-3xl md:text-4xl max-w-160 font-bold leading-1.2 tracking-tighter">The Growth you envision for your brand needs structure</h3>
-          <p className="text-sm font-body">Work with us, fill up our short application and get on that call today</p>
+          <p className="text-sm font-body">Fill up our short application, let's see if we are a fit.</p>
         </div>
         <MainBtn text="Apply to work with us" link="/Apply" />
       </div>
