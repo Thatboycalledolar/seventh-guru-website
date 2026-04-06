@@ -18,7 +18,7 @@
               <p className="text-center lg:text-left font-normal text-white/50 text-sm md:text-lg font-body w-full">We work with growth inclined Companies to create professional brand positioning, brand identity, and digital experiences that drive trust, conversion, and growth.</p>
             </Reveal> 
           </div>
-          <div className="mb-10">
+          <div >
             <Reveal delay={0.6} y={70}>
               <MainBtn text="Apply to work with Us" link="/Apply" />
             </Reveal>
@@ -32,13 +32,13 @@
         
       </div>
 
-      <Reveal delay={0} className="w-full max-w-300 px-8 md:px-20">
+      <Reveal delay={0.2} className="w-full max-w-300 px-8 md:px-20">
         <div className="flex items-center justify-between bg-white gap-4 border-3 border-(--secondary-color) rounded-2xl md:px-20 px-10 py-3 md:py-6 mb-24">
-          <Stats number="30+" title="Brands built" />
+          <Stats number="20+" title="Brands built" />
           <div className="h-8 bg-(--text-color) rounded-full w-0.5"></div>
           <Stats number="3" title="Countries" />
           <div className="h-8 bg-(--text-color) rounded-full w-0.5"></div>
-          <Stats number="12+" title="Tech Experts" />
+          <Stats number="80+" title="Projects" />
         </div>
         
       </Reveal>

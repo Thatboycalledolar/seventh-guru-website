@@ -6,9 +6,8 @@ import ApplyPageHeader from "../components/ApplyPageHeader";
 export default function Apply() {
   return(
     <div className="flex flex-col items-center  text-(--text-color) w-full">
-      <Reveal className="w-full">
         <ApplyPageHeader />
-      </Reveal>
+      
       <div className="w-full max-w-300">
         <Reveal>
          <Form />
