@@ -193,6 +193,7 @@ export default function Form() {
               placeholder="Company / Brand Name"
               value={formData.company}
               onChange={handleChange}
+              required
               className="bg-(--background-color) text-sm p-6 font-body italic rounded-md w-full"
             />
           </div>
