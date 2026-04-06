@@ -1,15 +1,13 @@
 import Reveal from "../components/Reveal";
+import AboutPageHead from "../components/AboutPageHeader";
 
 export default function About() {
   return(
-    <div className="flex flex-col px-8 md:px-16 pt-8 max-w-300">
-      <Reveal>
-        <h1 className="text-4xl md:text-5xl text-(--text-color) font-bold text-center mb-16">Let’s walk you through <br /> <span className="text-(--primary-color)">Who we are</span></h1>
-      </Reveal>
-      
+    <div className="flex flex-col w-full">
+        <AboutPageHead />
       
       {/* main div for the about content */}
-      <div className="flex flex-col">
+      <div className="flex flex-col max-w-300 mx-auto px-8 pt-16">
 
       <Reveal>
          {/* div for each content */}
@@ -53,15 +51,47 @@ export default function About() {
       <Reveal>
         <div className="flex flex-col text-(--text-color) w-full mb-16">
           <div className="flex flex-col gap-1 mb-4 ">
-            <h2 className="text-3xl font-bold ">Our Core Values</h2>
+            <h2 className="text-3xl font-bold ">Our Beliefs</h2>
           </div>
           <div className="bg-(--background-color) p-8 text-md rounded-lg gap-2 flex flex-col font-body">
-             <p>
-              Design without strategy causes chaos and unalignment. Strategy without execution lives on paper and brings no real results.
-            </p>
+            <ul className="px-4 marker:text-(--primary-color)">
+              <li className="list-disc ">Design without <span className="font-bold">strategy</span> causes chaos and unalignment.</li>
+              <li className="list-disc">Strategy without <span className="font-bold">execution</span> lives on paper and brings no real results.</li>
+              <li className="list-disc"><span className="font-bold">Strategic patterns</span> beat creative chaos every time.</li>
+            </ul>
             <p>
-              Strategic patterns beat creative chaos every time.We exist to combine all to create the magic your brand needs.
+              We exist to combine all to create the magic your brand needs.
             </p>
+          </div>
+        </div>
+      </Reveal>
+
+
+
+      <Reveal>
+        <div className="flex flex-col text-(--text-color) w-full mb-16">
+          <div className="flex flex-col gap-1 mb-4 ">
+            <h2 className="text-3xl font-bold ">Our Core Values</h2>
+          </div>
+          <div className="bg-(--background-color) p-8 text-md rounded-lg gap-8 flex flex-col font-body">
+            <div className="flex flex-col">
+              <h3 className="font-bold text-2xl mb-2">Professionalism</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto necessitatibus quisquam, voluptas tenetur quasi eum sequi recusandae itaque impedit corrupti distinctio molestiae sit voluptate cupiditate totam modi. Ipsum, delectus?</p>
+            </div>
+
+            <div className="w-[80%] h-px bg-gray-800"></div>
+
+            <div className="flex flex-col">
+              <h3 className="font-bold text-2xl mb-2">Creativity</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto necessitatibus quisquam, voluptas tenetur quasi eum sequi recusandae itaque impedit corrupti distinctio molestiae sit voluptate cupiditate totam modi. Ipsum, delectus?</p>
+            </div>
+
+            <div className="w-[80%] h-px bg-gray-800"></div>
+            
+            <div className="flex flex-col">
+              <h3 className="font-bold text-2xl mb-2">Adaptability</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto necessitatibus quisquam, voluptas tenetur quasi eum sequi recusandae itaque impedit corrupti distinctio molestiae sit voluptate cupiditate totam modi. Ipsum, delectus?</p>
+            </div>
           </div>
         </div>
       </Reveal>
@@ -69,21 +99,24 @@ export default function About() {
       </div>
 
      <Reveal>
-      <div className="flex flex-col gap-1 mb-4 bg-(--primary-color) text-white py-12 px-8 md:px-16 rounded-lg md:items-start w-full">
-        <h2 className="text-4xl font-bold mb-4 text-center ">Founder's Note</h2>
-        <div className="flex flex-col font-body w-full ">
+      <div className="px-4 pb-24">
+        <div className="flex flex-col gap-1 mb-4 bg-(--primary-color) text-white py-12 px-8 md:px-16 rounded-lg md:items-start w-full max-w-300 mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-center ">Founder's Note</h2>
+          <div className="flex flex-col font-body w-full ">
+            <p className="text-md text-center md:text-start mb-4">
+            Seventh Guru is a brand infrastructure and design studio that helps growth-stage companies clarify their brand positioning, and scale with confidence. 
+          </p>
           <p className="text-md text-center md:text-start mb-4">
-          Seventh Guru is a brand infrastructure and design studio that helps growth-stage companies clarify their brand positioning, and scale with confidence. 
-        </p>
-        <p className="text-md text-center md:text-start mb-4">
-          We work with founders and teams that understand that design is more than just beautiful visuals, it is strategic leverage for brands when used right.
-        </p>
-        <p className="text-md text-center md:text-start mb-4">
-          Every engagement begins with clarity: who you are, what you stand for, and why you matter. 
-        </p>
-        </div>
-        <p className="font-bold text-(--primary-color) bg-white py-2 px-4 rounded-md text-center md:text-start ">Clients do not come to us for design, They come for direction.</p>
-      </div>  
+            We work with founders and teams that understand that design is more than just beautiful visuals, it is strategic leverage for brands when used right.
+          </p>
+          <p className="text-md text-center md:text-start mb-4">
+            Every engagement begins with clarity: who you are, what you stand for, and why you matter. 
+          </p>
+          </div>
+          <p className="font-bold text-(--primary-color) bg-white py-2 px-4 rounded-md text-center md:text-start ">Clients do not come to us for design, They come for direction.</p>
+        </div>  
+      </div>
+      
      </Reveal>
         
     </div>
