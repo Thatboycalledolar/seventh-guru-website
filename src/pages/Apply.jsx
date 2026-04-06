@@ -1,23 +1,23 @@
 import Form from "../components/Form";
 import Contact from "../components/Contact";
 import Reveal from "../components/Reveal";
+import ApplyPageHeader from "../components/ApplyPageHeader";
 
 export default function Apply() {
   return(
-    <div className="max-w-300 flex flex-col items-center  text-(--text-color) mt-8 w-full px-8">
-      <Reveal>
-        <div className="mb-12 flex flex-col">
-        <h1 className="font-bold text-4xl md:text-6xl md:mb-4 text-center ">Apply to work with Us</h1>
-        <p className="text-center">Tell us about your project and we'll see if we're a good fit.</p>
+    <div className="flex flex-col items-center  text-(--text-color) w-full">
+      <Reveal className="w-full">
+        <ApplyPageHeader />
+      </Reveal>
+      <div className="w-full max-w-300">
+        <Reveal>
+         <Form />
+        </Reveal>
+        <Reveal>
+         <Contact />
+        </Reveal>
       </div>
-      </Reveal>
       
-      <Reveal>
-        <Form />
-      </Reveal>
-      <Reveal>
-        <Contact />
-      </Reveal>
       
       
     </div>
