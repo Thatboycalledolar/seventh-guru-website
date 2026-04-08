@@ -7,8 +7,7 @@ export default function ImageFade() {
     "/olar/olar-logo1.png",
     "/olar/olar-pres1.png",
     "/olar/olar-pres2.png",
-    "/olar/olar-flyer1.png",
-    
+    "/olar/olar-flyer1.png",   
   ];
 
   const [index, setIndex] = useState(0);
